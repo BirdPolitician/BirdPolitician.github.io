@@ -1,6 +1,6 @@
 {
-    "name": "evander_portfolio",
-    "short_name": "evander_portfolio",
+    "name": "Evander's Portfolio",
+    "short_name": "Evander's Portfolio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#222831e",
