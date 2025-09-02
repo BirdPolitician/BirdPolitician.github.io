@@ -1,11 +1,11 @@
 {
-    "name": "Evander's Portfolio",
-    "short_name": "Evander's Portfolio",
+    "name": "Testy McTestFace",
+    "short_name": "Testy McTestFace",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#222831e",
     "theme_color": "#222831e",
-    "description": "A showcase of previous work",
+    "description": "Testy McTestFace",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
