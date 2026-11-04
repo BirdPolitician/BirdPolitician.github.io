@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Under construction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tiny5+Duo&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #000;
+      overflow: hidden;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5vw;
+      box-sizing: border-box;
+    }
+    h1 {
+      margin: 0;
+      display: inline-block;
+      white-space: nowrap;
+      font-family: "Tiny5 Duo", "Courier New", monospace;
+      font-weight: 900;
+      /* fallback until the script below fits the text exactly */
+      font-size: 9vw;
+      line-height: 1;
+      text-align: center;
+      color: #1f5bff;
+    }
+    h1 span { display: block; }
+  </style>
+</head>
+<body>
+  <h1 id="title"><span>Under</span><span>construction</span></h1>
+
+  <script>
+    // Scale the text so the widest line fills the screen without overflowing.
+    (function () {
+      var h1 = document.getElementById("title");
+
+      function fit() {
+        var cs = getComputedStyle(document.body);
+        var availW = window.innerWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+        var availH = window.innerHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+
+        h1.style.fontSize = "100px";
+        var r = h1.getBoundingClientRect();
+        var scale = Math.min(availW / r.width, availH / r.height);
+        h1.style.fontSize = Math.floor(100 * scale * 0.98) + "px";
+      }
+
+      fit();
+      window.addEventListener("resize", fit);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+      window.addEventListener("load", fit);
+    })();
+  </script>
+</body>
+</html>
